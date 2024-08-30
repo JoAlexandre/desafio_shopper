@@ -5,9 +5,10 @@ import ImageRepository from "../repository/image.repository.js"
 async function getGeminiAnswerFromImage(body) {
   try {
     const measure_value = await GeminiRepository.getGeminiAnswerFromImage(body.image)
-    const hasImage = await ImageRepository.getImageByValues({...body, measure_value: parseInt(measure_value)}) 
+    await ImageRepository.getImageByValues({ ...body, measure_value: parseInt(measure_value) }) 
     return await ImageRepository.createImage({...body, measure_value}) 
   } catch (error) {
+    console.dir(error)
     throw error
   }
 

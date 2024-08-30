@@ -100,8 +100,8 @@ function GeminiAsk() {
 	}, [data]);
 
 	return (
-		<Container maxWidth="sm">
-			<h1>Desafio da Shopper.com.br </h1>
+		<>
+			<h3>Enviar Imagens com medidas (/upoad)</h3>
 			<form onSubmit={getAnswer}>
 				<Box
 					width={"100%"}
@@ -233,7 +233,7 @@ function GeminiAsk() {
 					value={data.resposta}
 				></textarea> */}
 			</form>
-		</Container>
+		</>
 	);
 }
 

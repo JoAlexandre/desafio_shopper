@@ -2,6 +2,12 @@ import express from "express";
 import winston from "winston";
 import indexRoute from "./routes/index.route.js";
 import db from "./repository/db.js";
+import { config } from 'dotenv'
+
+//inicializamos o .env do arquivo
+
+config()
+
 const app = express();
 const PORT = process.env.PORT
 app.use(express.json({limit: '50mb'}));
@@ -35,7 +41,7 @@ global.logger = winston.createLogger({
 
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Methods", "POST, GET, OPTONS");
+	res.header("Access-Control-Allow-Methods", "POST, GET, PATCH, OPTONS");
 	res.header("Access-Control-Allow-Headers", "Content-Type");
 	next();
 });
