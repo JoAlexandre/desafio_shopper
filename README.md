@@ -9,12 +9,12 @@ Foram estabelecidas as regras de negócio através do documento fornecido pela s
 
 
 ## Estrutura do projeto
-A solução do desafio esta na pasta backend, com o arquivo docker-compose.yml e Dockerfile nela. Apenas com estes dois, pode-se testar a aplicação.
+A solução do desafio esta na pasta backend, com o arquivo `docker-compose.yml` e `Dockerfile`. Apenas com estes dois, pode-se testar a aplicação.
 A quesito de facilidade, estou deixando um mini app na pasta frontend, com campos padronizados para fazer as solicitações exigidas no desafio.
 
 
 ## Variaveis de Ambiente
-A aplicação do backend ja esta preparada para receber a variavel de ambiente solicitada pelo desafio.
+A aplicação do backend está preparada para receber a variavel de ambiente solicitada pelo desafio.
 uma variavel de ambiente adicional tera que ser colocada para iniciar o servidor:
 no arquivo `.env`, defina `PORT=3001` para que o processo seja inicializado corretamente.
 
